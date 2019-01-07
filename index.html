@@ -34,7 +34,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="locModalLabel">Choose Location</h5>
+          <h5 class="modal-title" id="locModalLabel">Change Settings</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -50,6 +50,24 @@
                 <input type="text" id="state" class="form-control">
               </div>
           </form>
+          <div class="form-group">
+              <div class="input-group mb-3">
+                  <select class="custom-select" id="languages">
+                    <option selected>Choose...</option>
+                    <option value="1">English</option>
+                    <option value="2">Portuguese</option>
+                    <option value="3">Dioula</option>
+                    <option value="3">French</option>
+                  </select>
+                  <div class="input-group-append">
+                    <label class="input-group-text" id="languages" for="languages">Options</label>
+                  </div>
+                </div>
+
+            <!-- <label for="state">Language</label>
+            <input type="text" id="language" class="form-control"> -->
+          </div>
+        </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
