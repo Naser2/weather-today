@@ -1,22 +1,12 @@
-// // init Weather class / object 
 
-// const weather = new weather('New York', 'NY');
-
-// weather.getWeather()
-// .then()
-// .catch() 
-// // console.log()
-
-
-// Init weather object
-const weather = new Weather('London', 'uk', 'fr');
+const weather = new Weather('New York','usa', 'fr')
 
 // Get weather on DOM load
-document.addEventListener('DOMContentLoaded', getWeather);
+document.addEventListener('DOMContentLoaded', getTheWeather);
 
-// weather.changeLocation('Miami', 'FL');
+weather.changeLocation('Florida', 'us', 'eng');
 
-function getWeather(){
+function getTheWeather(){
   weather.getWeather()
     .then(results => {
       console.log(results);
