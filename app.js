@@ -3,7 +3,7 @@ const storage = new Storage();
 // Get stored location data
 const weatherLocation = storage.getLocationData();
 // Init weather object
-const weather = new Weather(weatherLocation.city, weatherLocation.state);
+const weather = new Weather(weatherLocation.city, weatherLocation.state, weatherLocation.language);
 // Init UI
 const ui = new UI();
 
@@ -14,12 +14,13 @@ document.addEventListener('DOMContentLoaded', getWeather);
 document.getElementById('w-change-btn').addEventListener('click', (e) => {
   const city = document.getElementById('city').value;
   const state = document.getElementById('state').value;
+  const language = document.getElementById('language').value;
 
   // Change location
-  weather.changeLocation(city, state);
+  weather.changeLocation(city, state, language);
 
   // Set location in LS
-  storage.setLocationData(city, state);
+  storage.setLocationData(city, state, language);
 
   // Get and display weather
   getWeather();
